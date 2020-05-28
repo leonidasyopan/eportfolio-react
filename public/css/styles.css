@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400,700&display=swap');
+
+
+/*  
+// MOBILE FIRST APPROACH - GENERAL STYLE FIRST
+*/
+
+/* MAIN STYLESHEET */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Color Theme Swatches in RGBA */
+.color-scheme-rgba-dark-red { color: rgba(191, 43, 82, 1); }
+.color-scheme-rgba-light-red { color: rgba(253, 66, 100, 1); }.color-scheme-rgba-light-blue { color: rgba(59, 145, 255, 1); }
+.color-scheme-rgba-dark-blue { color: rgba(23, 90, 179, 1); }
+.color-scheme-rgba-light-greenish  { color: rgba(105, 209, 230, 1); }
+.color-scheme-rgba-dark-greenish { color: rgba(77, 205, 195, 1); }
+
+body {
+    background-color: #fff;    
+    font: 400 15px 'Montserrat', serif, sans-serif;
+}
+
+h1 {    
+    font-family: 'Montserrat', serif, sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;      
+}
+
+.clear-float {
+    clear: both;
+}
+
+/* THIS IS THE FIXED HEADER STYLE */
+
+/* Style the header */
+header {    
+    background: rgba(59, 145, 255, 1);
+    color: #f1f1f1;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 102px;
+}
+
+header #logo {
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+header nav ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {     
+    margin: 0;
+    padding: 0;	
+}
+
+header nav ul li a:link{
+    display: block;     
+    color: #F2F2F2;
+    text-decoration: none;	
+    font-size: 13px;     
+    margin: 0;       
+    text-transform: uppercase;
+    padding: 10px 9px;
+}
+
+header nav ul li a:visited{
+    color: #fff;
+}
+
+header nav ul li a:hover{
+    color: rgba(191, 43, 82, 1);
+}
+
+header nav ul li a:active{
+    color: rgba(105, 209, 230, 1);
+}
+
+/* FIRST SECTION - IMAGE FULL SCREEN*/
+
+main #image-section {    
+    color: #fff;
+    text-align: center;
+    text-shadow: .5px .5px rgba(0, 0, 0, 0.5);    background-image: url("../img/computador-codigo-azulado.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main #image-section #full-page-image {
+    padding-top: 30vh;
+    padding-bottom: 35vh;
+}
+
+main #image-section h1 {    
+    font-size: 50px;    
+}
+
+main #image-section h2 {
+    font-size: 30px;
+    font-weight: normal;   
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5); 
+}
+
+main #rotating-header {
+    margin-top: 10px;
+}
+
+/* VIDEO PRESENTATION SECTION */
+
+#video-presentation {
+    padding: 70px 0;
+    background-color: rgb(245, 245, 245);
+}
+
+#video-presentation iframe {
+    display: block;
+    max-width: 95vw;
+    margin: 0 auto;
+}
+
+#video-presentation #text-video-companion {
+    color: rgb(100, 100, 100);    
+    line-height: 25px;
+    font-size: 16px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#video-presentation #text-video-companion p:nth-of-type(2) {
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 20px;
+    margin-bottom: 50px;    
+}
+
+#video-presentation #text-video-companion a {    
+    background-color: rgba(59, 145, 255, 0.25);
+    border: 2px solid rgba(59, 145, 255, 1);
+    border-radius: 10px;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: rgba(59, 145, 255, 1); 
+    font-size: 16px;
+}
+
+#video-presentation #text-video-companion a:hover {
+    cursor: pointer;
+    border: 2px solid rgba(253, 66, 100, 1);
+    color: rgba(253, 66, 100, 1);
+    background: rgba(253, 66, 100, 0.3);
+}
+
+/* SECOND SECTION - CONTACT SECTION */ 
+
+#contact-section {    
+    margin-top: 0;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#contact-section a {    
+    text-decoration: none;
+    color: rgba(59, 145, 255, 1);
+    font-weight: bold;
+}
+
+#contact-section a:hover {
+    color: rgba(191, 43, 82, 1);
+    text-decoration: underline;
+}
+
+#contact-section i {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 40px;
+    color: rgba(59, 145, 255, 1);       
+    display: block;
+}
+
+/* DOWNLOAD SECTION */ 
+
+#download-resume {
+    background: rgba(23, 90, 179, 1);
+    color: #fff;    
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 12vh;
+    padding-bottom: 12vh;    
+}
+
+#download-resume p {
+    font-size: 30px;
+    font-family: 'Montserrat', serif, sans-serif;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+#download-resume a {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 20px 60px;
+    text-decoration: none;
+    color: #fff; 
+    font-size: 16px;
+}
+
+#download-resume a:hover {
+    cursor: pointer;
+    border: 2px solid rgba(253, 66, 100, 1);
+    color: #fff;
+    background: rgba(253, 66, 100, 0.3);
+}
+
+/* PROFESSIONAL PROFILE */
+
+#professional-profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 16px;
+    color: rgb(53, 53, 53);
+    padding: 20px 10px;
+}
+
+#professional-profile #profile-headings {
+    grid-column: 1 / span 4;
+}
+
+#professional-profile #heading-name {    
+    font-size: 30px;
+    color: rgb(35, 35, 35);
+    margin-top: 40px;
+}
+
+#professional-profile #heading-title {    
+    color: rgb(100, 100, 100);
+    margin: 5px 0 20px 0; 
+}
+
+#profile-picture figure {    
+    overflow: hidden;
+    margin-bottom: 20px;
+    max-width: 100%;
+    margin-right: 20px;
+}
+
+#professional-profile p {
+    color: rgb(100, 100, 100);
+    margin: 20px 0;
+    line-height: 25px;
+}
+
+#profile-picture {
+    grid-column: 1 / span 5;
+}
+
+#professional-description {
+    grid-column: 1 / span 5;
+}
+
+/* PORTFOLIO SECTION */
+
+#portfolio-section {
+    padding: 10px;
+    background-color: rgb(245, 245, 245);
+}
+
+#portfolio-section h2 {
+    font-size: 30px;
+    color: rgb(35, 35, 35);
+    padding-top: 40px;
+}
+
+#portfolio-section h3 {
+    color: rgb(100, 100, 100);
+    margin: 5px 0 60px 0; 
+}
+
+#portfolio-section h4 {
+    color: rgb(35, 35, 35);
+    margin: 40px 0 10px 0;
+    font-size: 20px;
+}
+
+#portfolio-section figure {
+    max-width: 95vw;    
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+#portfolio-section a {
+    text-decoration: none;
+}
+
+#portfolio-section figure img {
+    width: 100%;
+}
+
+#portfolio-section figure figcaption {
+    visibility:hidden;
+    opacity:0;
+    transition:visibility 0.3s linear,opacity 0.3s linear; 
+}
+
+#portfolio-section figure:hover figcaption {
+    height: 50px;
+    visibility:visible;
+    opacity:1;
+    background-color: rgba(253, 66, 100, .9);
+    color: #fff;
+    padding: 15px 5px;
+    text-align: center;
+    margin-top: -50px;
+    position: relative;
+    z-index: 2;
+}
+
+#portfolio-section figure img:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+    transition-duration: 500ms;
+}
+
+/* FOOTER */
+
+footer {
+    background: rgba(59, 145, 255, 1);
+    color: #fff;    
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a:hover {
+    color: rgba(191, 43, 82, 1);
+    text-decoration: underline;
+}
+
+footer #contact-information-footer {
+    padding: 100px 20px;    
+}
+
+footer #contact-information-footer h2 {
+    font-size: 45px;
+}
+
+footer #contact-information-footer h2 + p {
+    font-weight: bold;
+    margin: 5px 0 50px 0;
+}
+
+footer #contact-information-footer div div:nth-of-type(2) p:first-of-type {    
+    margin: 0 0 15px 0;
+}
+
+footer #contact-information-footer ul {
+    list-style-type: none;
+}
+
+footer #contact-information-footer ul li {
+    margin: 3px 0;
+}
+
+footer #contact-information-footer ul i {
+    margin-right: 10px;
+    text-align: center;
+}
+
+footer #copyright-information-footer {
+    background: rgba(23, 90, 179, 1);  
+    padding: 30px 20px;    
+    font-size: smaller;
+}
+
+
+/*  
+// MEDIUM SCREENS - MEDIA QUERY BREAK
+*/
+@media (min-width:600px) {
+
+    /* SECOND SECTION - CONTACT SECTION */
+
+    header nav {   
+        padding: 0 100px;
+    }
+
+    /* FIRST SECTION - IMAGE FULL SCREEN*/       
+
+    main #image-section h1 {
+        font-size: 60px;        
+    }
+    
+    main #image-section h2 {        
+        font-size: 30px;    
+    }
+
+    #contact-section {
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        margin: 20px 0;
+    }
+
+    #contact-section div {
+        width: 33.33333333%;
+        text-align: center; 
+    }
+
+    #contact-section i {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    /* VIDEO PRESENTATION SECTION */
+
+    #video-presentation .two-columns-fifty-fifty {
+        display: flex;
+    }
+
+    #video-presentation #text-video-companion {
+        width: 40%;
+        margin-left: 50px;
+        padding-top: 0px;
+    }
+
+    #video-presentation #text-video-companion a {  
+        padding: 20px 60px;
+    }
+    
+    /* PROFESSIONAL PROFILE */
+
+    #professional-profile {
+        padding: 20px 20px;
+    }    
+
+    #profile-picture {
+        grid-column: 1 / span 1;
+    }
+    
+    #professional-description {
+        grid-column: 2 / span 4;
+    }
+
+    /* PORTFOLIO SECTION */ 
+
+    #portfolio-section { 
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }    
+
+    .portfolio-samples {
+        display: flex;
+    }
+
+    #portfolio-section figure {            
+        margin-right: 30px;
+        margin-top: 10px;
+    }
+
+}
+
+/*  
+// BIG SCREENS - MEDIA QUERY BREAK
+*/
+@media (min-width:1025px) {     
+
+    .content-width {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    /* THIS IS THE FIXED HEADER STYLE */
+
+    header {
+        padding: 5px 16px 0 16px;
+        background: rgba(59, 145, 255, 0.75);
+    }
+
+    header #logo {
+        height: 40px;
+        width: auto;
+        margin: 0;
+        display: initial;    
+        padding-top: 0px; 
+    }
+
+    header nav {    
+        float: right;
+        padding: 0;
+    }
+
+    header nav ul {
+        display: inherit;
+    }
+
+    header nav ul li {
+        display: inline-block; 
+    }
+
+    header nav ul li a:link{  
+        padding: 10px 20px; 
+    }
+
+    /* FIRST SECTION - IMAGE FULL SCREEN*/
+
+    main #image-section h1 {        
+        font-size: 80px;        
+    }
+    
+    main #image-section h2 {        
+        font-size: 30px;    
+    }  
+
+    /* FOOTER */
+
+    footer #contact-information-footer {
+        padding: 100px 0;    
+    }
+
+    footer #copyright-information-footer {
+        padding: 30px 0;
+    }
+
+}
+
+@media screen and (max-width: 1024px) { /* Specific to the background image of first section*/
+    main #background-first-section {
+        left: 50%;
+        margin-left: -512px;   /* 50% */
+    }
+} 
